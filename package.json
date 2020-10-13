@@ -1,0 +1,45 @@
+{
+  "name": "eduzz-connect",
+  "version": "1.0.0",
+  "description": "",
+  "rootDir": "src",
+  "scripts": {
+    "format": "prettier-eslint src/**/*.ts --write",
+    "lint": "eslint --ext .ts src",
+    "build": "tsc",
+    "prepare": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.5.3",
+    "date-fns": "^1.30.1",
+    "date-fns-timezone": "^0.1.4",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "promisepipe": "^3.0.0",
+    "rxjs": "^6.6.2",
+    "tslib": "^1.10.0",
+    "uuid": "^7.0.3",
+    "knex": "^0.21.5",
+    "mssql": "^6.2.1"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.5.7",
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^10.3.2",
+    "@types/node-uuid": "^0.0.28",
+    "@types/knex": "^0.16.1",
+    "@types/qs": "^6.9.3",
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
+    "@typescript-eslint/parser": "^4.1.0",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "2.1.1",
+    "prettier-eslint-cli": "^5.0.0",
+    "ts-node": "^9.0.0",
+    "ts-node-dev": "^1.0.0-pre.62",
+    "typescript": "4.0.2"
+  }
+}
