@@ -1,22 +1,10 @@
 import knex from 'knex';
+import { ReplaySubject } from 'rxjs';
 
-let connection;
+const $connection = new ReplaySubject<any>(1);
 
-export const init = ({ host, user, password }) => {
-  connection = knex({
-    client: 'mssql',
-    connection: {
-      host,
-      user,
-      password,
-      database: 'maxyall_prod',
-      options: {
-        encrypt: true
-      },
-      requestTimeout: 180000,
-      connectTimeout: 120000
-    }
-  });
+export const init = params => {
+  $connection.next(knex(params));
 };
 
-export default connection;
+export const getConnection = $connection.asObservable();

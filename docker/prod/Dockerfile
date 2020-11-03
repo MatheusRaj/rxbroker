@@ -7,4 +7,4 @@ COPY . /app
 RUN yarn install \
   && yarn cache clean
 
-CMD node /app/dist/bin/worker.js
+CMD node /app/dist/index.js

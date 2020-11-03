@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . /app
 
-RUN npm i -g yarn \
-  && yarn
+RUN yarn install \
+  && yarn cache clean
 
-CMD yarn cron-start
+CMD node /app/dist/index.js
